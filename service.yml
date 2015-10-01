@@ -1,0 +1,20 @@
+achrailsdata:
+    container_name: achrails-data
+    image: postgres
+    env_file:
+        - common.env
+achrails:
+    container_name: achrails
+    image: learninglayers/achrails
+    #volumes_from:
+    #    - achrailsdata
+    volumes:
+        - .:/achrails
+    ports:
+        - "3003:3003"
+    env_file:
+        - common.env
+    links:
+        - achrailsdata 
+    needs
+        - achrailsdata
