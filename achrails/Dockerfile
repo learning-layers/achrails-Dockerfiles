@@ -10,14 +10,16 @@ COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
 
-RUN mkdir achrails
+RUN mkdir /achrails
 
 RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.4-alpha.tar.gz \
-    | tar -zxC achrails --strip-components=1
-
+    | tar -zxC /achrails --strip-components=1
+RUN echo ls
 ADD . /achrails
+COPY database.yml /achrails/config/database.yml
 WORKDIR /achrails
 
-
 VOLUME /achrails
-CMD ["rails","server","-b","0.0.0.0"]
+#RUN rake db:migrate
+
+CMD ["rails","server","-b","0.0.0.0", "-p", "3000"]
