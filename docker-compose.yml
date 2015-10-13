@@ -1,6 +1,6 @@
 postgres:
     container_name: postgres
-    image: postgres
+    image: learninglayers/postgres
 achrails:
     container_name: achrails
     image: learninglayers/achrails
