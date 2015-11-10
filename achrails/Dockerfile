@@ -21,8 +21,9 @@ WORKDIR /achrails
 
 VOLUME /achrails
 
+#RUN rake db:create
+#RUN rake db:migrate
 
-RUN rake db:create
-RUN rake db:migrate
-
-CMD ["rails","server","-b","0.0.0.0", "-p", "3000"]
+CMD rake db:create \
+    | rake db:migrate \
+    | rails server -b 0.0.0.0 -p 3000
