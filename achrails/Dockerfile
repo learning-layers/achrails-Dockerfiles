@@ -9,7 +9,6 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
-
 RUN mkdir /achrails
 
 RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.5.3.tar.gz \
@@ -17,14 +16,9 @@ RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.5.3.tar.gz \
 RUN echo ls
 ADD . /achrails
 COPY database.yml /achrails/config/database.yml
+
 WORKDIR /achrails
-
 VOLUME /achrails
+COPY start-achrails.sh start-achrails.sh
 
-#RUN rake db:create
-#RUN rake db:migrate
-
-CMD rake db:create \
-    | rake db:migrate \
-    | bundle exec rake assets:precompile \
-    | rails server -b 0.0.0.0 -p 3000
+CMD ["bash", "start-achrails.sh"]
