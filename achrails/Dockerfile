@@ -26,5 +26,5 @@ VOLUME /achrails
 
 CMD rake db:create \
     | rake db:migrate \
-    | rake assets:precompile \
+    | bundle exec rake assets:precompile \
     | rails server -b 0.0.0.0 -p 3000
