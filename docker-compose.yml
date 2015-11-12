@@ -11,7 +11,6 @@ achrails:
     ports:
         - "3000:3000"
     env_file:
-        - common.env
         - achrails.env
     # linking is used to make sure that postgres is launched first
     links:
