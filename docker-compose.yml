@@ -12,7 +12,6 @@ achrails:
         - "3000:3000"
     env_file:
         - achrails.env
-        - achrails_demo.env
     # linking is used to make sure that postgres is launched first
     links:
         - postgres 
