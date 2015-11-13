@@ -8,5 +8,5 @@ rake db:migrate
 bundle exec rake assets:precompile
 
 # Start the server
-rails server -b 0.0.0.0 -p 3000
+exec rails server -b 0.0.0.0 -p 3000
 
