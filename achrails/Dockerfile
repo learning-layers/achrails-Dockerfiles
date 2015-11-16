@@ -11,7 +11,7 @@ RUN bundle install
 
 RUN mkdir /achrails
 
-RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.5.12.tar.gz \
+RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.5.13.tar.gz \
     | tar -zxC /achrails --strip-components=1
 RUN echo ls
 ADD . /achrails
