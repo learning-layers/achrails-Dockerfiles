@@ -2,10 +2,10 @@
 	"application_type": "web",
 	"client_name": "Ach so!",
 	"client_uri": "http://achso.aalto.fi",
-	"logo_uri": "LAYERS_API_URI/achrails/oidc_logo.png",
+	"logo_uri": "$LAYERS_API_URI/achrails/oidc_logo.png",
 	"token_endpoint_auth_method": "client_secret_basic",
 	"redirect_uris": [
-		"LAYERS_API_URI/achrails/users/auth/learning_layers_oidc/callback",
+		"$LAYERS_API_URI/achrails/users/auth/learning_layers_oidc/callback",
 		"app://achso.legroup.aalto.fi"
 	],
 	"grant_types": [
