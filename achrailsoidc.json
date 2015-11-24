@@ -15,10 +15,5 @@
 	"response_types": [
 		"code"
 	],
-	"scope": [
-		"openid", 
-		"offline_access", 
-		"email", 
-		"profile"
-	]
+	"scope": ["openid", "offline_access", "email", "profile"]
 }
