@@ -1,8 +1,19 @@
 {
-"redirect_uris":["LAYERS_API_URI/achrails/users/auth/learning_layers_oidc/callback"],
-"client_name":"Ach so!",
-"token_endpoint_auth_method":"client_secret_basic",
-"scope": "openid offline_access email profile",
-"grant_types":["authorization_code", "refresh_token"],
-"response_types": ["code"]
+	"application_type": "web",
+	"client_name": "Ach so!",
+	"client_uri": "http://achso.aalto.fi",
+	"logo_uri": "LAYERS_API_URI/achrails/oidc_logo.png",
+	"token_endpoint_auth_method": "client_secret_basic",
+	"redirect_uris": [
+		"LAYERS_API_URI/achrails/users/auth/learning_layers_oidc/callback",
+		"app://achso.legroup.aalto.fi"
+	],
+	"grant_types": [
+		"authorization_code",
+		"refresh_token"
+	],
+	"response_types": [
+		"code"
+	],
+	"scope": "openid offline_access email profile"
 }
