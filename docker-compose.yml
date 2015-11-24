@@ -14,7 +14,8 @@ achrails:
         - achrails.env
     # linking is used to make sure that postgres is launched first
     links:
-        - postgres 
+        - postgres
+        - oidc        
     actions:
         - create_oidcclients: [achrails.env]
 #achrails-data:
