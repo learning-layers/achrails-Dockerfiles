@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+# Install gemfiles
+bundle install
+
 # Setup database
 rake db:create
 rake db:migrate
