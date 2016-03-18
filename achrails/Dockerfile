@@ -13,4 +13,7 @@ WORKDIR /achrails
 VOLUME /achrails
 COPY start-achrails.sh start-achrails.sh
 
+# Install gems
+RUN bundle install
+
 CMD ["bash", "start-achrails.sh"]
