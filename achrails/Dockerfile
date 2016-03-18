@@ -3,7 +3,7 @@ MAINTAINER Jukka Purma <jukka.purma ÄT aalto.fi>
 
 RUN mkdir /achrails
 
-RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.6.1.tar.gz \
+RUN curl -SL https://github.com/learning-layers/achrails/archive/v0.6.2.tar.gz \
     | tar -zxC /achrails --strip-components=1
 RUN echo ls
 ADD . /achrails
