@@ -16,4 +16,7 @@ COPY start-achrails.sh start-achrails.sh
 # Install gems
 RUN bundle install
 
+# Precompile assets
+RUN bundle exec rake assets:precompile
+
 CMD ["bash", "start-achrails.sh"]
