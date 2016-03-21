@@ -4,9 +4,6 @@
 rake db:create
 rake db:migrate
 
-# Precompile assets
-bundle exec rake assets:precompile
-
 # Purge in the background
 ./purge-sessions.sh &
 
